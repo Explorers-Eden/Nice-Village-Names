@@ -1,0 +1,1 @@
+$execute at @s positioned $(x) $(y) $(z) unless entity @e[type=marker,tag=village.name,distance=..64] run summon marker ~ ~ ~ {Tags:["village.name"],CustomName:'{"bold":false,"color":"#$(color)","italic":false,"text":"$(name)"}'}
