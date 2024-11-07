@@ -6,10 +6,12 @@ scoreboard objectives add village_names trigger
 scoreboard objectives add village_names_msg_on dummy
 scoreboard objectives add village_names_msg_off dummy
 scoreboard objectives modify village_names displayname "Village Names Title Message Toggle"
+scoreboard objectives add eden.used.bell minecraft.custom:minecraft.bell_ring
 
 ##init schedules
 schedule function village_names:run 2s
 schedule function village_names:bell_particles 10t
+schedule function village_names:rename/run 5t
 
 ##create database
 execute unless data storage eden:name_db village run function village_names:database/create
