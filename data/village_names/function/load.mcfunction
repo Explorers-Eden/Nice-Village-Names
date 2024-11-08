@@ -14,7 +14,7 @@ schedule function village_names:bell_particles 10t
 schedule function village_names:rename/run 5t
 
 ##create database
-execute unless data storage eden:name_db village run function village_names:database/create
+function village_names:database/create
 
 ##remove temp storage
 data remove storage eden:temp village
