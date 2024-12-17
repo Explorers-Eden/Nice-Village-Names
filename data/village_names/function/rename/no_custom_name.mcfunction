@@ -3,6 +3,6 @@ execute at @n[type=marker,tag=village.name] run particle minecraft:happy_village
 kill @n[type=marker,tag=village.name]
 kill @n[type=text_display,tag=village.name]
 
-tag @n[type=villager,tag=eden.villagename.set,predicate=eden:entity/is_nearby_64] remove eden.villagename.set
+tag @n[type=villager,tag=eden.villagename.set,predicate=eden:entity/is_nearby_48] remove eden.villagename.set
 
 execute as @s[gamemode=!creative] run item modify entity @s weapon.mainhand eden:used_item
