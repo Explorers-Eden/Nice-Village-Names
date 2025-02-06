@@ -18,7 +18,7 @@ execute as @e[type=marker,tag=village.name] at @s unless block ~ ~ ~ minecraft:b
 execute as @e[type=text_display,tag=village.name] at @s unless entity @e[type=marker,tag=village.name,distance=..1.5] run kill @s
 execute as @e[type=text_display,tag=village.name] at @s unless block ~ ~ ~ #minecraft:air run kill @s
 
-execute as @e[type=villager,tag=eden.villagename.set,limit=32,sort=random] unless if data entity @s Brain.memories.minecraft:meeting_point.value run tag @s remove eden.villagename.set
+execute as @e[type=villager,tag=eden.villagename.set,limit=32,sort=random] unless data entity @s Brain.memories.minecraft:meeting_point.value run tag @s remove eden.villagename.set
 
 execute as @e[type=player,tag=!at_village] at @s if entity @e[type=marker,tag=village.name,distance=..96] unless score @s village_names matches 1 run function village_names:display_name/entering with entity @n[type=marker,tag=village.name]
 execute as @e[type=player,tag=!not_at_village] at @s unless entity @e[type=marker,tag=village.name,distance=..96] run function village_names:display_name/exiting
