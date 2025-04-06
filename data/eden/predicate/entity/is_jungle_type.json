@@ -1,11 +1,10 @@
 {
-    "condition": "minecraft:entity_properties",
-    "entity": "this",
-    "predicate": {
-      "type_specific": {
-        "type": "minecraft:villager",
-        "variant": "minecraft:jungle"
-      }
+  "condition": "minecraft:entity_properties",
+  "entity": "this",
+  "predicate": {
+    "type": "minecraft:villager",
+    "components": {
+      "minecraft:villager/variant": "minecraft:jungle"
     }
   }
-  
+}

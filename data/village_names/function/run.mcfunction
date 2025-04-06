@@ -14,7 +14,7 @@ execute as @e[type=villager,tag=!eden.villagename.set,predicate=eden:entity/is_t
 execute as @e[type=marker,tag=village.name] at @s run function village_names:set_display with entity @s
 
 execute as @e[type=marker,tag=village.name] at @s unless block ~ ~ ~ minecraft:bell run kill @s
-#execute as @e[type=marker,tag=village.name,tag=!village.name.custom] at @s unless entity @e[type=villager,tag=eden.villagename.set,distance=..96] run kill @s
+
 execute as @e[type=text_display,tag=village.name] at @s unless entity @e[type=marker,tag=village.name,distance=..1.5] run kill @s
 execute as @e[type=text_display,tag=village.name] at @s unless block ~ ~ ~ #minecraft:air run kill @s
 
